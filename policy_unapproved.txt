@@ -96,7 +96,7 @@ PARAMETERS
 
 resource "azurerm_policy_assignment" "example" {
   name = "example-policy-assignment"
-  scope = "/subscriptions/da08201d-e47b-46b5-841a-9cf343419302/resourceGroups/Pranav2"
+  scope = "/subscriptions/da08201d-e47b-46b5-841a-9cf343419302/resourceGroups/Pranav"
   policy_definition_id = azurerm_policy_definition.example.id
   description = "Audit resources using unapproved SCDs"
   display_name = "Audit resources using unapproved SCDs"
@@ -110,11 +110,11 @@ METADATA
   parameters = <<PARAMETERS
 {
   "ApprovedResourcesProd": {
-  "value":["Microsoft.AAD","Microsoft.ApiManagement","Microsoft.Network/applicationGateways","Microsoft.Automation","Microsoft.Network/bastionHosts","Microsoft.Cache/Redis","Microsoft.Cdn","Microsoft.ContainerRegistry","Microsoft.DataFactory","Microsoft.Databricks","Microsoft.DataLakeStore","Microsoft.EventHub","Microsoft.HDInsight","Microsoft.Logic","Microsoft.Sql","Microsoft.DevOps","Microsoft.ServiceBus","Microsoft.KeyVault","Microsoft.Storage/storageAccounts","Microsoft.Network/networkSecurityGroups","Microsoft.Network/virtualNetworks","Microsoft.StreamAnalytics/streamingjobs/functions","Microsoft.Network/privateLinkServices","Microsoft.Network/dnszones","Microsoft.Network/azureFirewalls","Microsoft.Web/staticSites/userProvidedFunctionApps"]
+  "value":["Microsoft.AAD","Microsoft.ApiManagement","Microsoft.Network/applicationGateways","Microsoft.Automation","Microsoft.Network/bastionHosts","Microsoft.Cache/Redis","Microsoft.Cdn","Microsoft.ContainerRegistry","Microsoft.DataFactory","Microsoft.Databricks","Microsoft.DevOps","Microsoft.Compute/disks","Microsoft.Network/dnszones ","Microsoft.EventGrid","Microsoft.EventHub","Microsoft.HDInsight","Microsoft.Logic","Microsoft.Sql","Microsoft.Kubernetes","Microsoft.MachineLearning","Microsoft.Network/loadBalancers","Microsoft.ServiceBus","Microsoft.KeyVault","Microsoft.Storage/storageAccounts","Microsoft.Network/networkSecurityGroups","Microsoft.Network/virtualNetworks","Microsoft.Network/privateLinkServices","Microsoft.Network/dnszones","Microsoft.Network/azureFirewalls","Microsoft.Web/staticSites/userProvidedFunctionApps","Microsoft.Storage/storageAccounts","Microsoft.Storage/storageAccounts/tableServices/tables","Microsoft.Network/trafficmanagerprofiles","Microsoft.PowerBI","Microsoft.Network/virtualWans"]
  },
 
  "ApprovedResourcesNonProd": {
-  "value":["Microsoft.AAD","Microsoft.ApiManagement","Microsoft.Network/applicationGateways","Microsoft.Network/bastionHosts","Microsoft.Automation","Microsoft.Cache/Redis","Microsoft.Cdn","Microsoft.ContainerRegistry","Microsoft.Databricks","Microsoft.ContainerRegistry","Microsoft.DataFactory","Microsoft.DataLakeStore","Microsoft.EventHub","Microsoft.HDInsight","Microsoft.Logic","Microsoft.Sql","Microsoft.DevOps","Microsoft.ServiceBus","Microsoft.KeyVault","Microsoft.Storage/storageAccounts","Microsoft.Network/networkSecurityGroups","Microsoft.Network/virtualNetworks","Microsoft.StreamAnalytics/streamingjobs/functions","Microsoft.Network/privateLinkServices","Microsoft.Network/dnszones","Microsoft.Network/azureFirewalls","Microsoft.Web/staticSites/userProvidedFunctionApps"]
+  "value":["Microsoft.AAD","Microsoft.ApiManagement","Microsoft.Network/applicationGateways","Microsoft.Automation","Microsoft.Network/bastionHosts","Microsoft.Cache/Redis","Microsoft.Cdn","Microsoft.ContainerRegistry","Microsoft.DataFactory","Microsoft.Databricks","Microsoft.DevOps","Microsoft.Compute/disks","Microsoft.Network/dnszones ","Microsoft.EventGrid","Microsoft.EventHub","Microsoft.HDInsight","Microsoft.Logic","Microsoft.Sql","Microsoft.Kubernetes","Microsoft.MachineLearning","Microsoft.Network/loadBalancers","Microsoft.ServiceBus","Microsoft.KeyVault","Microsoft.Storage/storageAccounts","Microsoft.Network/networkSecurityGroups","Microsoft.Network/virtualNetworks","Microsoft.Network/privateLinkServices","Microsoft.Network/dnszones","Microsoft.Network/azureFirewalls","Microsoft.Web/staticSites/userProvidedFunctionApps","Microsoft.Storage/storageAccounts","Microsoft.Storage/storageAccounts/tableServices/tables","Microsoft.Network/trafficmanagerprofiles","Microsoft.PowerBI","Microsoft.Network/virtualWans"]
  },
  "tagName": {
    "value":"Environment"
